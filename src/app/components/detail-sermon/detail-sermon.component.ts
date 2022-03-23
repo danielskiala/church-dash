@@ -9,6 +9,16 @@ export class DetailSermonComponent implements OnInit {
 
   constructor() { }
 
+  addActive = false;
+
+  toggle() {
+    if (this.addActive == false) {
+      this.addActive = true;
+    } else {
+      this.addActive = false;
+    }
+  }
+  
   ngOnInit(): void {
   }
 

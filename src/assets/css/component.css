@@ -2,7 +2,7 @@
   --white: #fff;
   --color-primary: #1da1f2;
   --color-success: #1bb607;
-
+  --color-danger: #eb4c3b;
   --input-c-c: #bbbbbb;
 }
 
@@ -35,7 +35,7 @@
 
 .group-form {
   width: 100%;
-  position:relative;
+  position: relative;
   margin-bottom: 20px;
 }
 
@@ -46,16 +46,15 @@
   font-family: inherit;
 }
 
-
 /**
  *
  * Group Form Flex
  *
  */
 
-.group-form-flex{
-    display:flex;
-    width:100%;
+.group-form-flex {
+  display: flex;
+  width: 100%;
 }
 
 /**
@@ -91,6 +90,11 @@
 
 .bg-primary {
   background-color: var(--color-primary);
+  color: var(--white);
+}
+
+.bg-danger {
+  background-color: var(--color-danger);
   color: var(--white);
 }
 
@@ -130,3 +134,28 @@
   justify-content: center;
 }
 /*=====  End of Section Box flex  ======*/
+
+/**
+ *
+ * Section-error
+ *
+ */
+
+.input-error {
+  border: 1px solid var(--color-danger);
+  background-color: #eb4d3b4b;
+}
+
+.text-error {
+  color: #eb4c3b;
+  font-size: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.card-error {
+  border: 1px solid #eb4c3b;
+  padding: 20px;
+  margin: 10px 0;
+}
+/*=====  End of Section-error  ======*/

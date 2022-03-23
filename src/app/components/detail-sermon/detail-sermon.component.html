@@ -1,6 +1,25 @@
 <div class="wrapper-dash">
-    <app-side-nav></app-side-nav>
-    <app-nav-respon-dash></app-nav-respon-dash>
+    <app-side-nav [addActive]="addActive"></app-side-nav>
+    <div class="wrapper-nav-resp">
+        <div class="nav-resp">
+            <div class="nav-resp-left">
+                <div class="nav-resp-logo">
+                    <img src="../../../assets/ressources/logo/72x72.png" alt="">
+                </div>
+
+                <div class="nav-resp-profil">
+                    <div class="nav-profil-circle">
+                        <img src="../../../assets/ressources/icons/male_user.svg" alt="">
+                    </div>
+                    <div class="dot-line"></div>
+                </div>
+            </div>
+
+            <div class="nav-resp-toggle" (click)="toggle()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
     <div class="dash">
         <div class="dash-title padding-10">
             <h1>Sermon detail</h1>

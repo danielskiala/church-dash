@@ -175,6 +175,11 @@
   .dash-modal-wrapper .dsh-m-form .group-form-flex .group-form {
     width: 100%;
   }
+
+  .file-preview .fl-pr-img{
+    margin-right:13px;
+    margin-bottom:10px;
+  }
 }
 
 /*=====  End of Mobile  ======*/
