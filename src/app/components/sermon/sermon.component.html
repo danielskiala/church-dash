@@ -1,0 +1,209 @@
+<div class="wrapper-dash">
+    <app-side-nav [addActive]="addActive"></app-side-nav>
+    <div class="wrapper-nav-resp">
+        <div class="nav-resp">
+            <div class="nav-resp-left">
+                <div class="nav-resp-logo">
+                    <img src="../../../assets/ressources/logo/72x72.png" alt="">
+                </div>
+
+                <div class="nav-resp-profil">
+                    <div class="nav-profil-circle">
+                        <img src="../../../assets/ressources/icons/male_user.svg" alt="">
+                    </div>
+                    <div class="dot-line"></div>
+                </div>
+            </div>
+
+            <div class="nav-resp-toggle" (click)="toggle()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+    <!-- Dash Modal -->
+    <!-- Dash Modal -->
+    <div class="dash-modal" (click)="closeModal($event)">
+        <div class="dash-modal-wrapper" (click)="stopPropagation($event)">
+            <div class="dsh-m-head flex space-between align-items">
+                <h2>Add sermon</h2>
+
+                <div class="cancel" (click)="closeModal($event)">
+                    <i class='bx bx-x'></i>
+                </div>
+            </div>
+
+            <div class="dsh-m-form">
+                <form action="" method="post">
+                    <div class="group-form-flex space-between">
+                        <div class="group-form">
+                            <label for="title">Title</label>
+                            <input type="text" name="" id="title" placeholder="Title" class="input-control">
+                        </div>
+
+                        <div class="group-form">
+                            <label for="pastor">Pastor name</label>
+                            <input type="text" name="" id="pastor" placeholder="Pastor name" class="input-control">
+                        </div>
+                    </div>
+
+
+                    <div class="group-form">
+                        <label for="link">link video</label>
+                        <input type="url" name="" id="link" placeholder="Link a video" class="input-control">
+                    </div>
+
+                    <div class="group-form">
+                        <label for="phone">Description</label>
+                        <textarea name="" id="" cols="30" rows="5" class="input-control"></textarea>
+                    </div>
+                    <div class="form-btn">
+                        <button class="btn bg-success">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Dash Modal -->
+    <!-- Dash Modal -->
+
+    <div class="dash">
+        <div class="dash-title padding-10">
+            <h1>Manage sermons</h1>
+        </div>
+
+        <div class="dash-tableau padding-10">
+            <div class="filter">
+                <div class="filter-head">
+                    <h2>Filter</h2>
+                    <div class="fl-icon" (click)="Filter()">
+                        <i class='bx bx-filter-alt'></i>
+                    </div>
+                </div>
+
+                <div class="filter-inputs">
+                    <form action="" method="post" class="form-filter">
+                        <div class="form-filter-content">
+                            <div class="group-form">
+                                <label for="date">date</label>
+                                <div class="input-flex">
+                                    <div>
+                                        <span class="label">Au</span>
+                                        <input type="date" name="" id="" class="input-control">
+                                    </div>
+                                    <div>
+                                        <span class="label">Du</span>
+                                        <input type="date" name="" id="" class="input-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="group-form">
+                                <label for="titre">title</label>
+                                <input type="text" name="" id="" placeholder="Search by title" class="input-control">
+                            </div>
+
+                            <div class="group-form">
+                                <label for="titre">description</label>
+                                <input type="text" name="" id="" placeholder="Search by description"
+                                    class="input-control">
+                            </div>
+                        </div>
+
+                        <div class="form-filter-btn">
+                            <button>Filter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="dash-title-search">
+                <div class="dsh-right">
+                    <div class="group-form">
+                        <input type="text" placeholder="Search..">
+                        <div class="tab-search">
+                            <i class='bx bx-search'></i>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-add" (click)="showModal($event)">Add a sermon <i
+                        class='bx bx-plus-circle'></i></button>
+            </div>
+            <div class="table">
+                <table class="wd-600 wd-900">
+                    <thead>
+                        <th>#ID</th>
+                        <th>Titre <i class='bx bxs-sort-alt'></i></th>
+                        <th>Description <i class='bx bxs-sort-alt'></i></th>
+                        <th>Pastor <i class='bx bxs-sort-alt'></i></th>
+                        <th>Status <i class='bx bxs-sort-alt'></i></th>
+                        <th>Action</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Event memorial</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                            <td>Paw micheal</td>
+                            <td><span class="published bg-green">published</span></td>
+                            <td>
+                                <div class="actions-flex">
+                                    <a href="#" class="action danger" title="delete">
+                                        <i class='bx bx-trash'></i>
+                                    </a>
+                                    <button class="action blue" type="button" title="edit">
+                                        <i class='bx bx-edit'></i>
+                                    </button>
+                                    <a routerLink="/detail" class="action green" title="detail">
+                                        <i class='bx bx-detail'></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>02</td>
+                            <td>Event memorial</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                            <td>Todd andry</td>
+                            <td><span class="published bg-danger">cancel</span></td>
+                            <td>
+                                <div class="actions-flex">
+                                    <a href="#" class="action danger" title="delete">
+                                        <i class='bx bx-trash'></i>
+                                    </a>
+                                    <button class="action blue" type="button" title="edit">
+                                        <i class='bx bx-edit'></i>
+                                    </button>
+                                    <a routerLink="detail" class="action green" title="detail">
+                                        <i class='bx bx-detail'></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>Event memorial</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                            <td>Paw micheal</td>
+                            <td><span class="published">running</span></td>
+                            <td>
+                                <div class="actions-flex">
+                                    <a href="#" class="action danger" title="delete">
+                                        <i class='bx bx-trash'></i>
+                                    </a>
+                                    <button class="action blue" type="button" title="edit">
+                                        <i class='bx bx-edit'></i>
+                                    </button>
+                                    <a href="#" class="action green" title="detail">
+                                        <i class='bx bx-detail'></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

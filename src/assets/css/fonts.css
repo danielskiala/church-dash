@@ -1,0 +1,23 @@
+/*=============================================
+=            Fonts Dashboard            =
+=============================================*/
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("../../assets/ressources/fonts/Lato-Regular.ttf") format("truetype");
+  font-display: swap !important;
+}
+
+@font-face {
+  font-family: "Lato-Light";
+  src: url("../../assets/ressources/fonts/Lato-Light.ttf") format("truetype");
+  font-display: swap !important;
+}
+
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../../assets/ressources/fonts/Lato-Bold.ttf") format("truetype");
+  font-display: swap !important;
+}
+
+/*=====  End of Fonts Dashboard  ======*/

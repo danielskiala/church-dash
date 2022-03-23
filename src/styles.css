@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/css/fonts.css";
+@import "assets/css/reset.css";
+@import "assets/css/component.css";
+@import "assets/css/dash.css";
+@import "assets/css/responsiveDash.css"

@@ -1,0 +1,152 @@
+<div class="wrapper-dash">
+    <app-side-nav [addActive]="addActive"></app-side-nav>
+    <div class="wrapper-nav-resp">
+        <div class="nav-resp">
+            <div class="nav-resp-left">
+                <div class="nav-resp-logo">
+                    <img src="../../../assets/ressources/logo/72x72.png" alt="">
+                </div>
+
+                <div class="nav-resp-profil">
+                    <div class="nav-profil-circle">
+                        <img src="../../../assets/ressources/icons/male_user.svg" alt="">
+                    </div>
+                    <div class="dot-line"></div>
+                </div>
+            </div>
+
+            <div class="nav-resp-toggle" (click)="toggle()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+    <!-- Dash Modal -->
+    <!-- Dash Modal -->
+    <div class="dash-modal" (click)="closeModal($event)">
+        <div class="dash-modal-wrapper" (click)="stopPropagation($event)">
+            <div class="dsh-m-head flex space-between align-items">
+                <h2>Add Administrator</h2>
+
+                <div class="cancel" (click)="closeModal($event)">
+                    <i class='bx bx-x'></i>
+                </div>
+            </div>
+
+            <div class="dsh-m-form">
+                <form action="" method="post">
+                    <div class="group-form-flex space-between">
+                        <div class="group-form">
+                            <label for="name">Name</label>
+                            <input type="text" name="" id="name" placeholder="Name" class="input-control">
+                        </div>
+
+                        <div class="group-form">
+                            <label for="email">Email</label>
+                            <input type="email" name="" id="email" placeholder="email" class="input-control">
+                        </div>
+                    </div>
+
+
+                    <div class="group-form">
+                        <label for="phone">Phone</label>
+                        <input type="tel" name="" id="phone" placeholder="Phone" class="input-control">
+                    </div>
+
+                    <div class="group-form">
+                        <label for="phone">Role</label>
+                        <select name="" id="" class="input-control">
+                            <option value="">Choose role</option>
+                            <option value="">role_1</option>
+                            <option value="">role_2</option>
+                        </select>
+                    </div>
+
+                    <div class="group-form-flex space-between">
+                        <div class="group-form">
+                            <label for="passe">Password</label>
+                            <input type="password" name="" id="name" placeholder="Password" class="input-control">
+                        </div>
+
+                        <div class="group-form">
+                            <label for="confir">Password confirm</label>
+                            <input type="password" name="" id="name" placeholder="Password confirm"
+                                class="input-control">
+                        </div>
+                    </div>
+
+                    <div class="available">
+                        <label class="check flex align-items">
+                            <input type="checkbox" name="" id="" hidden>
+                            <div class="label-check">
+                                <p>Availbility administrator</p>
+                            </div>
+
+                            <div class="check-square">
+                                <i class='bx bx-check'></i>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-btn">
+                        <button class="btn bg-success">Valid</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Dash Modal -->
+    <!-- Dash Modal -->
+
+    <div class="dash">
+        <div class="dash-title padding-10">
+            <h1>Administrator</h1>
+        </div>
+
+        <div class="dash-tableau padding-10">
+            <div class="dash-title-search">
+                <div class="dsh-right">
+                    <div class="group-form">
+                        <input type="text" placeholder="Search.." class="input-control">
+                        <div class="tab-search">
+                            <i class='bx bx-search'></i>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-add" (click)="showModal($event)">Add administrator <i
+                        class='bx bx-plus-circle'></i></button>
+            </div>
+            <div class="table">
+                <table class="wd-800">
+                    <thead>
+                        <th>#ID</th>
+                        <th>Name <i class='bx bxs-sort-alt'></i></th>
+                        <th>Email <i class='bx bxs-sort-alt'></i></th>
+                        <th>Phone <i class='bx bxs-sort-alt'></i></th>
+                        <th>Status <i class='bx bxs-sort-alt'></i></th>
+                        <th>Action</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Jhon</td>
+                            <td>Jhondoe@gmail.com</td>
+                            <td>+243 81 55 88 952</td>
+                            <td><span class="published bg-green">Active</span></td>
+                            <td>
+                                <div class="actions-flex">
+                                    <a href="#" class="action danger" title="delete">
+                                        <i class='bx bx-trash'></i>
+                                    </a>
+                                    <button class="action blue" type="button" title="edit">
+                                        <i class='bx bx-edit'></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

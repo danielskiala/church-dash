@@ -1,0 +1,213 @@
+<div class="wrapper-dash">
+    <app-side-nav [addActive]="addActive"></app-side-nav>
+    <div class="wrapper-nav-resp">
+        <div class="nav-resp">
+            <div class="nav-resp-left">
+                <div class="nav-resp-logo">
+                    <img src="../../../assets/ressources/logo/72x72.png" alt="">
+                </div>
+
+                <div class="nav-resp-profil">
+                    <div class="nav-profil-circle">
+                        <img src="../../../assets/ressources/icons/male_user.svg" alt="">
+                    </div>
+                    <div class="dot-line"></div>
+                </div>
+            </div>
+
+            <div class="nav-resp-toggle" (click)="toggle()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="dash">
+        <div class="dash-title padding-10">
+            <h1>Dashboard</h1>
+        </div>
+
+        <div class="dash-statis">
+            <div class="stat-box">
+                <div class="stat-head">
+                    <h2>Events</h2>
+                    <div class="stat-icon">
+                        <i class='bx bx-news'></i>
+                    </div>
+                </div>
+
+                <div class="stat-num">
+                    <h1>25</h1>
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-head">
+                    <h2>Gallery</h2>
+                    <div class="stat-icon">
+                        <i class='bx bx-photo-album'></i>
+                    </div>
+                </div>
+
+                <div class="stat-num">
+                    <h1>25</h1>
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-head">
+                    <h2>Sermons</h2>
+                    <div class="stat-icon">
+                        <i _ngcontent-vui-c16="" class="bx bx-video"></i>
+                    </div>
+                </div>
+
+                <div class="stat-num">
+                    <h1>25</h1>
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-head">
+                    <h2>Ministries</h2>
+                    <div class="stat-icon">
+                        <i _ngcontent-qxg-c16="" class="bx bx-church"></i>
+                    </div>
+                </div>
+
+                <div class="stat-num">
+                    <h1>25</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="dash-tableau padding-10">
+            <div class="filter">
+                <div class="filter-head">
+                    <h2>Filter</h2>
+                    <div class="fl-icon" (click)="Filter()">
+                        <i class='bx bx-filter-alt'></i>
+                    </div>
+                </div>
+
+                <div class="filter-inputs">
+                    <form action="" method="post" class="form-filter">
+                        <div class="form-filter-content">
+                            <div class="group-form">
+                                <label for="date">date</label>
+                                <div class="input-flex">
+                                    <div>
+                                        <span class="label">Au</span>
+                                        <input type="date" name="" id="" class="input-control">
+                                    </div>
+                                    <div>
+                                        <span class="label">Du</span>
+                                        <input type="date" name="" id="" class="input-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="group-form">
+                                <label for="titre">title</label>
+                                <input type="text" name="" id="" placeholder="Search by title" class="input-control">
+                            </div>
+
+                            <div class="group-form">
+                                <label for="titre">description</label>
+                                <input type="text" name="" id="" placeholder="Search by description"
+                                    class="input-control">
+                            </div>
+                        </div>
+
+                        <div class="form-filter-btn">
+                            <button>Filter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="dash-title-search">
+                <h2>Events</h2>
+                <div class="dsh-right">
+                    <div class="group-form">
+                        <input type="text" placeholder="Search..">
+                        <div class="tab-search">
+                            <i class='bx bx-search'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table">
+                <table class="wd-600 wd-900">
+                    <thead>
+                        <th>#ID</th>
+                        <th>Titre <i class='bx bxs-sort-alt'></i></th>
+                        <th>Description <i class='bx bxs-sort-alt'></i></th>
+                        <th>Status <i class='bx bxs-sort-alt'></i></th>
+                        <th>Action</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Event memorial</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                            <td><span class="published bg-green">published</span></td>
+                            <td>
+                                <div class="actions-flex">
+                                    <a href="#" class="action danger" title="delete">
+                                        <i class='bx bx-trash'></i>
+                                    </a>
+                                    <button class="action blue" type="button" title="edit">
+                                        <i class='bx bx-edit'></i>
+                                    </button>
+                                    <a href="#" class="action green" title="detail">
+                                        <i class='bx bx-detail'></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>02</td>
+                            <td>Event memorial</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                            <td><span class="published bg-danger">cancel</span></td>
+                            <td>
+                                <div class="actions-flex">
+                                    <a href="#" class="action danger" title="delete">
+                                        <i class='bx bx-trash'></i>
+                                    </a>
+                                    <button class="action blue" type="button" title="edit">
+                                        <i class='bx bx-edit'></i>
+                                    </button>
+                                    <a href="#" class="action green" title="detail">
+                                        <i class='bx bx-detail'></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>Event memorial</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                            <td><span class="published">running</span></td>
+                            <td>
+                                <div class="actions-flex">
+                                    <a href="#" class="action danger" title="delete">
+                                        <i class='bx bx-trash'></i>
+                                    </a>
+                                    <button class="action blue" type="button" title="edit">
+                                        <i class='bx bx-edit'></i>
+                                    </button>
+                                    <a href="#" class="action green" title="detail">
+                                        <i class='bx bx-detail'></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
